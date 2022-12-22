@@ -1,0 +1,142 @@
+.App {
+  text-align: center;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0);
+  }
+
+  60% {
+    transform: scale(1.05);
+  }
+
+  80% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes popIns {
+  0% {
+    transform: scale(0);
+  }
+
+  60% {
+    transform: scale(1.05);
+  }
+
+  80% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    font-size: "20px";
+    transform: translateY(100px);
+  }
+
+  100% {
+    font-size: "30px";
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUps {
+  0% {
+    font-size: "20px";
+    transform: translateY(100px);
+  }
+
+  100% {
+    font-size: "30px";
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUpss {
+  0% {
+    font-size: "30px";
+    opacity: 1;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 0.1;
+    font-size: "20px";
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUpsss {
+  0% {
+    font-size: "30px";
+    opacity: 1;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 0.1;
+    font-size: "20px";
+    transform: translateY(0);
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.75s ease both;
+}
+
+.slide-ups {
+  animation: slideUps 0.75s ease both;
+}
+
+.slide-up- {
+  animation: slideUpss 0.75s ease both;
+}
+
+.slide-ups- {
+  animation: slideUpsss 0.75s ease both;
+}
+
+.pop-in {
+  animation: popIn 1s ease both;
+}
+
+.pop-ins {
+  animation: popIns 1s ease both;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+input[type="range"] {
+  opacity: .2;
+  transition: all .5s;
+}
+
+input[type="range"]:hover {
+  opacity: 1;
+  transition: all .5s;
+}
