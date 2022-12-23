@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
 .App {
   text-align: center;
+  font-family: 'Dancing Script', cursive;
 }
 
 @keyframes popIn {
@@ -126,9 +129,74 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
   color: white;
+  overflow: hidden;
+}
+
+.date-time-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-width: 100%;
+  padding: 10px;
+  color: green;
+  opacity: 0.3;
+
+}
+
+.wish {
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 50px;
+  margin: 0;
+  padding: 0;
+  color: grey;
+}
+
+.timer {
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 50px;
+  margin: 0;
+  padding: 0;
+  min-width: 210px;
+  text-align: left;
+}
+
+.date-time {
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 50px;
+  margin: 0;
+  padding: 0;
+
+}
+
+.text-wrapper {
+  max-width: 1000px;
+}
+
+.text-preview {
+  opacity: 0.1;
+  font-size: 25px;
+
+}
+
+.type-text-view {
+  border: 1px solid transparent;
+  position: relative;
+  padding: 10px;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: left
+}
+
+.highligth-text {
+  color: red;
+  position: absolute;
+  z-index: 1;
+  text-align: left;
 }
 
 input[type="range"] {
