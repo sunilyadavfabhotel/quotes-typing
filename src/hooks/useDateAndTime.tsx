@@ -23,7 +23,7 @@ const useDateAndTime = () => {
     (hour < 16 && "Afternoon") ||
     (hour < 20 && "Evening") ||
     "Night"
-  } Om Rudra `;
+  } `;
 
   const time = today.toLocaleTimeString(locale, {
     hour: "numeric",

@@ -19,6 +19,7 @@ const getTime = (second: number) => {
 
 function App() {
   const [input, setInput] = useState("");
+  const [name, setName] = useState("Sunil");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [animate, setAnimate] = useState("slide-up");
   const [animate1, setAnimate1] = useState("pop-in");
@@ -73,7 +74,10 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="date-time-wrapper pop-in">
-          <p className="wish">{wish}</p>
+          <p className="wish">
+            {wish}
+            {name}
+          </p>
           <p className="timer">{getTime(timmer)}</p>
           <p className="date-time">{date}</p>
           <p className="timer">{time}</p>
@@ -151,6 +155,21 @@ function App() {
         </div>
       </header>
       <footer>
+        <div style={{ fontSize: "50px", paddingBottom: "40px" }}>
+          <span style={{ fontSize: "50px" }}>Update Your Name : </span>
+          <input
+            style={{
+              width: "300px",
+              fontSize: "50px",
+              backgroundColor: "transparent",
+              border: "1px solid #f005",
+              fontFamily: "Dancing Script",
+            }}
+            type="text"
+            value={name}
+            onChange={(e: any) => setName(e.target.value)}
+          />
+        </div>
         <div className="icon-wrap center row">
           <a
             href="https://github.com/SunilKuYadav"
