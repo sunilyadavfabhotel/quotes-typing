@@ -281,9 +281,8 @@ const al = [
   "15. He has a great sense of humor",
   "One of the biggest strengths of an alpha male is his sense of humor. He doesn't get offended if people make fun of him. Instead, he spins the situation in his favor by laughing at himself. He can make light of even his most humiliating failure because he considers it a learning experience. A silly joke has no effect on his sense of self-worth — he takes it in his stride and wins the hearts of even his detractors.",
 ];
-// quotes data
-const QUOTES_DATA = [
-  "Remember to smile",
+
+const advice4 = [
   "Take risks in your life. If you win, you can lead; if you lose, you can guide.",
   "People are not what they say but what they do; so judge them not from their words but from their actions.",
   "When someone hurts you, don't feel bad because it's a law of nature that the tree that bears the sweetest fruits gets maximum number of stones.",
@@ -304,11 +303,26 @@ const QUOTES_DATA = [
   "The difference between a corrupt person and an honest person is: The corrupt person has a price while the honest person has a value.",
   "If you succeed in cheating someone, don't think that the person is a fool...... Realize that the person trusted you much more than you deserved.",
   "Honesty is an expensive gift; don't expect it from cheap people.",
-  ...Freedom_is_Worth_The_Fight,
-  ...advice1,
-  ...advice2,
+];
+const advice5 = [
+  "After a while, you get used to people understanding.",
+  "Aspire to inspire before you expire.",
+  "Bad? Nope. I'm the worst!",
+  "Contrary to popular belief, I know exactly what I'm doing.",
+  "Do I have a short temper? Nope. But I do have a quick reaction when it comes to bullsh*t",
+  "Don't try to fit in. You were born to stand out.",
+  "Even the galaxy is incomplete without me, 'coz I'm the main star.",
+];
+// quotes data
+const QUOTES_DATA = [
+  "Remember to smile",
+  ...advice5,
+  ...advice4,
   ...advice3,
+  ...advice2,
+  ...advice1,
   ...al,
+  ...Freedom_is_Worth_The_Fight,
 ];
 
 export {
