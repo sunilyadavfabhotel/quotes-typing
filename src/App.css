@@ -189,7 +189,7 @@
 }
 
 .text-wrapper {
-  max-width: 900px;
+  max-width: 1000px;
 }
 
 .text-preview {
@@ -201,7 +201,6 @@
 .type-text-view {
   border: 1px solid transparent;
   position: relative;
-  padding: 10px;
   font-size: 40px;
   font-weight: bold;
   text-align: left
