@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 
 import "./App.css";
 import { QUOTES_DATA } from "./data";
-import useDateAndTime from "./hooks/useDateAndTime";
+import { useDateAndTime, useLocalStorage } from "./hooks";
 
-const getTime = (second: number) => {
+const getFormatedTime = (second: number) => {
   let sec: string | number = second % 60;
   let min: string | number = Math.floor((second / 60) % 60);
   let hour: string | number = Math.floor(second / 60 / 60);
@@ -13,15 +13,12 @@ const getTime = (second: number) => {
   min = min < 10 ? `0${min}` : min;
   hour = hour < 10 ? `0${hour}` : hour;
 
-  console.log(second, hour, min, sec);
   return `${hour}:${min}:${sec}`;
 };
 
 function App() {
   const [input, setInput] = useState("");
-  const [charCount, setCharCount] = useState(0);
-  const [name, setName] = useState("Sunil");
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [timmer, setTimmer] = useState(0);
   const [animate, setAnimate] = useState("slide-up");
   const [animate1, setAnimate1] = useState("pop-in");
   const [animate2, setAnimate2] = useState("slide-up-");
@@ -33,8 +30,15 @@ function App() {
 
   const { date, time, wish } = useDateAndTime();
 
-  const [timmer, setTimmer] = useState(0);
+  const [name, setName] = useLocalStorage("name", "Sunil");
+  const [charCount, setCharCount] = useLocalStorage("count", 0);
+  const [currentIndex, setCurrentIndex] = useLocalStorage("index", 0);
 
+  const handleReset = () => {
+    setName(-1);
+    setCharCount(-1);
+    setCurrentIndex(-1);
+  };
   function highlight(text: any) {
     sethighlightedQuotes(() => text);
   }
@@ -43,7 +47,7 @@ function App() {
     if (currentQuotes.includes(e.target.value)) {
       highlight(e.target.value);
     }
-    setCharCount((prev) => prev + 1);
+    setCharCount((prev: number) => prev + 1);
     setInput(() => e.target.value);
   };
 
@@ -58,7 +62,7 @@ function App() {
         sethighlightedQuotes("");
         setInput("");
         const len = QUOTES_DATA.length;
-        setCurrentIndex(() => currentIndex + (1 % len));
+        setCurrentIndex(() => (currentIndex + 1) % len);
       }
     }
   };
@@ -80,7 +84,7 @@ function App() {
             {wish}
             {name}
           </p>
-          <p className="timer">{getTime(timmer)}</p>
+          <p className="timer">{getFormatedTime(timmer)}</p>
           <p className="date-time">{date}</p>
           <p className="timer">{time}</p>
         </div>
@@ -105,13 +109,7 @@ function App() {
           </p>
         </div>
         <div>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              padding: "0 10px",
-            }}
-          >
+          <div className="slider-wrapper" style={{}}>
             <input
               type="range"
               value={textVisibilty}
@@ -132,22 +130,9 @@ function App() {
             />
           </div>
           <textarea
+            className="typing-area"
             style={{
-              width: "100vw",
-              maxWidth: "1000px",
-              fontSize: "40px",
-              fontFamily: "Dancing Script",
-              overflow: "hidden",
-              padding: "10px",
-              border: "none",
-              outline: "none",
-              boxShadow: "none",
-              resize: "none",
-              backgroundColor: "black",
-              color: "grey",
               opacity: inputVisibility,
-              paddingBottom: "50px",
-              borderRadius: "5px",
             }}
             value={input}
             rows={2}
@@ -157,21 +142,19 @@ function App() {
         </div>
       </header>
       <footer>
-        <div style={{ fontSize: "40px", paddingBottom: "40px" }}>
-          <p style={{ padding: 0, margin: 0 }}>
-            Your total key stroke is :
-            <span style={{ color: "#fff" }}>{charCount}</span>
-          </p>
-          <span>Update Your Name : </span>
+        <div className="editor-wrapper">
+          <div className="counter-wrapper">
+            <p className="pm-0 gray">
+              Your total key stroke is :
+              <span className="white">{charCount}</span>
+            </p>
+            <button className="pm-0 reset-btn" onClick={handleReset}>
+              Reset Page
+            </button>
+          </div>
+          <span className="gray">Update Your Name : </span>
           <input
-            style={{
-              width: "300px",
-              fontSize: "50px",
-              backgroundColor: "transparent",
-              border: "1px solid #f005",
-              fontFamily: "Dancing Script",
-              color: "#fff",
-            }}
+            className="name-input"
             type="text"
             value={name}
             onChange={(e: any) => setName(e.target.value)}

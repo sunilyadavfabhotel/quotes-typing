@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
+body {
+  margin: 0;
+}
+
 .App {
   text-align: center;
   font-family: 'Dancing Script', cursive;
@@ -193,7 +197,12 @@
 .text-preview {
   opacity: 0.1;
   font-size: 25px;
+}
 
+.slider-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
 }
 
 .type-text-view {
@@ -221,6 +230,22 @@ input[type="range"]:hover {
   transition: all .5s;
 }
 
+.typing-area {
+  width: 100vw;
+  max-width: 1000px;
+  font-size: 40px;
+  font-family: "Dancing Script";
+  padding: 10px;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  resize: none;
+  background-color: #000;
+  color: grey;
+  padding-bottom: 50px;
+  border-radius: 5px;
+}
+
 footer {
   background: #1b242f;
   padding: 70px 0 50px 0;
@@ -229,6 +254,59 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.editor-wrapper {
+  font-size: 40px;
+  padding-bottom: 40px;
+}
+
+.gray {
+  color: gray;
+}
+
+.white {
+  color: #fff;
+}
+
+.p-0 {
+  padding: 0;
+  margin: 0;
+}
+
+.counter-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reset-btn {
+  border: 2px solid #0f0;
+  background-color: transparent;
+  color: #f00;
+  outline: none;
+  font-size: 30px;
+  margin: 0 10px;
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+  transition: all .5s;
+}
+
+.reset-btn:hover {
+  border: 2px solid #0f0;
+  color: #0f0;
+  background-color: #f00;
+  transition: all .5s;
+}
+
+.name-input {
+  width: 300px;
+  font-size: 50px;
+  background-color: transparent;
+  border: 2px solid #f00;
+  font-family: "Dancing Script";
+  color: #fff;
 }
 
 footer .mdi-chevron-double-up {
