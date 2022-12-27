@@ -90,11 +90,11 @@ function App() {
         </div>
 
         <div className="text-wrapper">
-          <p className={`${animate2} text-preview gray`}>
+          <p className={`${animate2} text-preview white`}>
             {QUOTES_DATA[(currentIndex - 1) % QUOTES_DATA.length]}
           </p>
-          <div className="type-text-view gray">
-            <p className="highligth-text gray">{highlightedQuotes}</p>
+          <div className="type-text-view white">
+            <p className="highligth-text">{highlightedQuotes}</p>
             <p
               className={animate}
               style={{
@@ -104,12 +104,12 @@ function App() {
               {currentQuotes}
             </p>
           </div>
-          <p className={`${animate1} text-preview`}>
+          <p className={`${animate1} text-preview white`}>
             {QUOTES_DATA[(currentIndex + 1) % QUOTES_DATA.length]}
           </p>
         </div>
         <div>
-          <div className="slider-wrapper" style={{}}>
+          <div className="slider-wrapper">
             <input
               type="range"
               value={textVisibilty}
