@@ -210,7 +210,10 @@ function App() {
         </div>
         <div className="info-box">
           <div className="footnote">
-            SUNIL KUMAR YADAV <span className="highlight">&copy;2022-23</span>
+            SUNIL KUMAR YADAV{" "}
+            <span className="highlight">
+              &copy;2022-{new Date().getFullYear()}
+            </span>
           </div>
         </div>
       </footer>
