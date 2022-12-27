@@ -19,6 +19,7 @@ const getTime = (second: number) => {
 
 function App() {
   const [input, setInput] = useState("");
+  const [charCount, setCharCount] = useState(0);
   const [name, setName] = useState("Sunil");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [animate, setAnimate] = useState("slide-up");
@@ -42,6 +43,7 @@ function App() {
     if (currentQuotes.includes(e.target.value)) {
       highlight(e.target.value);
     }
+    setCharCount((prev) => prev + 1);
     setInput(() => e.target.value);
   };
 
@@ -155,8 +157,12 @@ function App() {
         </div>
       </header>
       <footer>
-        <div style={{ fontSize: "50px", paddingBottom: "40px" }}>
-          <span style={{ fontSize: "50px" }}>Update Your Name : </span>
+        <div style={{ fontSize: "40px", paddingBottom: "40px" }}>
+          <p style={{ padding: 0, margin: 0 }}>
+            Your total key stroke is :
+            <span style={{ color: "#fff" }}>{charCount}</span>
+          </p>
+          <span>Update Your Name : </span>
           <input
             style={{
               width: "300px",
@@ -164,6 +170,7 @@ function App() {
               backgroundColor: "transparent",
               border: "1px solid #f005",
               fontFamily: "Dancing Script",
+              color: "#fff",
             }}
             type="text"
             value={name}
