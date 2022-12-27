@@ -149,7 +149,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  color: white;
   overflow: hidden;
 }
 
@@ -159,7 +158,10 @@ body {
   justify-content: space-between;
   min-width: 100%;
   padding: 10px;
-  color: green;
+  position: fixed;
+  top: 0;
+  background-color: #282c34;
+  z-index: 9;
 }
 
 .wish {
@@ -168,7 +170,6 @@ body {
   line-height: 50px;
   margin: 0;
   padding: 0;
-  color: grey;
 }
 
 .timer {
@@ -263,6 +264,10 @@ footer {
 
 .gray {
   color: gray;
+}
+
+.green {
+  color: #0f0;
 }
 
 .white {

@@ -80,21 +80,21 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="date-time-wrapper pop-in">
-          <p className="wish">
+          <p className="wish gray">
             {wish}
-            {name}
+            <span className="green">{name}</span>
           </p>
-          <p className="timer">{getFormatedTime(timmer)}</p>
-          <p className="date-time">{date}</p>
-          <p className="timer">{time}</p>
+          <p className="timer green">{getFormatedTime(timmer)}</p>
+          <p className="date-time gray">{date}</p>
+          <p className="timer gray">{time}</p>
         </div>
 
         <div className="text-wrapper">
-          <p className={`${animate2} text-preview`}>
+          <p className={`${animate2} text-preview gray`}>
             {QUOTES_DATA[(currentIndex - 1) % QUOTES_DATA.length]}
           </p>
-          <div className="type-text-view">
-            <p className="highligth-text">{highlightedQuotes}</p>
+          <div className="type-text-view gray">
+            <p className="highligth-text gray">{highlightedQuotes}</p>
             <p
               className={animate}
               style={{
