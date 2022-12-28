@@ -30,7 +30,7 @@ function App() {
 
   const { date, time, wish } = useDateAndTime();
 
-  const [name, setName] = useLocalStorage("name", "Sunil");
+  const [name, setName] = useLocalStorage("name", "Sunil Kumar Yadav");
   const [charCount, setCharCount] = useLocalStorage("count", 0);
   const [currentIndex, setCurrentIndex] = useLocalStorage("index", 0);
 
