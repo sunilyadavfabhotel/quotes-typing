@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import "./App.css";
 import { QUOTES_DATA } from "./data";
@@ -33,6 +33,12 @@ function App() {
   const [name, setName] = useLocalStorage("name", "Sunil");
   const [charCount, setCharCount] = useLocalStorage("count", 0);
   const [currentIndex, setCurrentIndex] = useLocalStorage("index", 0);
+
+  const nameRef = useRef<HTMLInputElement>(null);
+
+  const handleInputFocus = () => {
+    nameRef.current?.focus();
+  };
 
   const handleReset = () => {
     setName(-1);
@@ -83,7 +89,9 @@ function App() {
           <div className="left">
             <p className="wish gray">
               {wish}
-              <span className="green">{name}</span>
+              <span className="green pointer" onClick={handleInputFocus}>
+                {name}
+              </span>
             </p>
             <p className="date-time gray">{date}</p>
           </div>
@@ -159,6 +167,7 @@ function App() {
           </div>
           <span className="gray">Update Your Name : </span>
           <input
+            ref={nameRef}
             className="name-input"
             type="text"
             value={name}

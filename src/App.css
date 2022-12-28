@@ -164,6 +164,10 @@ body {
   text-align: left;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 .app-name {
   color: #0f0;
   font-size: 40px;
