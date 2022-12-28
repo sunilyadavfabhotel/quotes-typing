@@ -80,13 +80,18 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="date-time-wrapper pop-in">
-          <p className="wish gray">
-            {wish}
-            <span className="green">{name}</span>
-          </p>
-          <p className="timer green">{getFormatedTime(timmer)}</p>
-          <p className="date-time gray">{date}</p>
-          <p className="timer gray">{time}</p>
+          <div className="left">
+            <p className="wish gray">
+              {wish}
+              <span className="green">{name}</span>
+            </p>
+            <p className="date-time gray">{date}</p>
+          </div>
+          <div className="app-name">Quotes-typing</div>
+          <div className="left">
+            <p className="timer gray"> Time: {time}</p>
+            <p className="timer green">Timer: {getFormatedTime(timmer)}</p>
+          </div>
         </div>
 
         <div className="text-wrapper">
