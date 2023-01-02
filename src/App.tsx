@@ -1,20 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 
 import "./App.css";
-import { QUOTES_DATA } from "./data";
-import { useDateAndTime, useLocalStorage } from "./hooks";
-
-const getFormatedTime = (second: number) => {
-  let sec: string | number = second % 60;
-  let min: string | number = Math.floor((second / 60) % 60);
-  let hour: string | number = Math.floor(second / 60 / 60);
-
-  sec = sec < 10 ? `0${sec}` : sec;
-  min = min < 10 ? `0${min}` : min;
-  hour = hour < 10 ? `0${hour}` : hour;
-
-  return `${hour}:${min}:${sec}`;
-};
+import { useDateAndTime, useLocalStorage, useQuotesReducer } from "./hooks";
+import { getFormatedTime } from "./utils";
+import { OPTIONS } from "./types";
 
 function App() {
   const [input, setInput] = useState("");
@@ -23,12 +12,12 @@ function App() {
   const [animate1, setAnimate1] = useState("pop-in");
   const [animate2, setAnimate2] = useState("slide-up-");
   const [highlightedQuotes, sethighlightedQuotes] = useState("");
-  const [currentQuotes, setCurrentQuotes] = useState(QUOTES_DATA[0]);
 
   const [textVisibilty, setTextVisibilty] = useState(1);
   const [inputVisibility, setInputVisibility] = useState(1);
 
   const { date, time, wish } = useDateAndTime();
+  const [currentQuotes, dispatchQuotes]: any = useQuotesReducer();
 
   const [name, setName] = useLocalStorage("name", "Sunil Kumar Yadav");
   const [charCount, setCharCount] = useLocalStorage("count", 0);
@@ -43,14 +32,14 @@ function App() {
   const handleReset = () => {
     setName(-1);
     setCharCount(-1);
-    setCurrentIndex(-1);
+    setCurrentIndex(0);
   };
   function highlight(text: any) {
     sethighlightedQuotes(() => text);
   }
 
   const handleInputChange = (e: any): void => {
-    if (currentQuotes.includes(e.target.value)) {
+    if (currentQuotes[currentIndex].includes(e.target.value)) {
       highlight(e.target.value);
     }
     setCharCount((prev: number) => prev + 1);
@@ -59,7 +48,7 @@ function App() {
 
   const handleEnterKeyHit = (e: any) => {
     if (e.key === "Enter") {
-      if (currentQuotes === highlightedQuotes) {
+      if (currentQuotes[currentIndex] === highlightedQuotes) {
         setAnimate((prev) => (prev === "slide-up" ? "slide-ups" : "slide-up"));
         setAnimate2((prev) =>
           prev === "slide-up-" ? "slide-ups-" : "slide-up-"
@@ -67,15 +56,15 @@ function App() {
         setAnimate1((prev) => (prev === "pop-in" ? "pop-ins" : "pop-in"));
         sethighlightedQuotes("");
         setInput("");
-        const len = QUOTES_DATA.length;
+        const len = currentQuotes.length;
         setCurrentIndex(() => (currentIndex + 1) % len);
       }
     }
   };
-  useEffect(() => {
-    setCurrentQuotes(() => QUOTES_DATA[currentIndex]);
-  }, [currentIndex]);
-
+  const handleQuotesCollectionChange = (e: any) => {
+    setCurrentIndex(0);
+    dispatchQuotes({ type: e.target.value });
+  };
   useEffect(() => {
     const timers = setInterval(() => {
       setTimmer((prev) => prev + 1);
@@ -104,7 +93,7 @@ function App() {
 
         <div className="text-wrapper">
           <p className={`${animate2} text-preview white`}>
-            {QUOTES_DATA[(currentIndex - 1) % QUOTES_DATA.length]}
+            {currentQuotes[(currentIndex - 1) % currentQuotes.length]}
           </p>
           <div className="type-text-view white">
             <p className="highligth-text">{highlightedQuotes}</p>
@@ -114,11 +103,11 @@ function App() {
                 opacity: textVisibilty,
               }}
             >
-              {currentQuotes}
+              {currentQuotes[currentIndex]}
             </p>
           </div>
           <p className={`${animate1} text-preview white`}>
-            {QUOTES_DATA[(currentIndex + 1) % QUOTES_DATA.length]}
+            {currentQuotes[(currentIndex + 1) % currentQuotes.length]}
           </p>
         </div>
         <div>
@@ -156,6 +145,15 @@ function App() {
       </header>
       <footer>
         <div className="editor-wrapper">
+          <div className="quotes-collection-option">
+            <select onChange={handleQuotesCollectionChange}>
+              {OPTIONS.map((item) => (
+                <option key={item.type} value={item.type}>
+                  {item.label}
+                </option>
+              ))}
+            </select>
+          </div>
           <div className="counter-wrapper">
             <p className="pm-0 gray">
               Your total key stroke is :
