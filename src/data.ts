@@ -1,4 +1,6 @@
-const Freedom_is_Worth_The_Fight = [
+const SMILE: string[] = ["Remember to smile"];
+
+const Freedom_is_Worth_The_Fight: string[] = [
   "Opened eyes",
   "now take a breath",
   "A living miracle",
@@ -68,7 +70,7 @@ const Freedom_is_Worth_The_Fight = [
   "Do not surrender.Dare to live to the fullest and dream to the fullest. Dare to embrace each day with optimism, hope and faith… knowing THE BEST IS YET TO COME.",
   "No government or system can ever take that from you.",
 ];
-const advice1 = [
+const advice1: string[] = [
   "1. Have a firm handshake.",
   "A firm handshake is necessary in life for making a great first impression on everyone you meet.",
   "2. Look people in the eye.",
@@ -162,7 +164,7 @@ const advice1 = [
   "46. Don't expect life to be fair.",
   "Life is not fair. Life is hard. Expect it to be that way. But that doesn't mean you can't achieve your dreams or goals. Never lose hope, work hard and have patience. If you can master these skills, what you want will come. It is only a matter of time.",
 ];
-const advice2 = [
+const advice2: string[] = [
   "Have a firm handshake.",
   "Look people in the eye.",
   "Sing in the shower.",
@@ -214,7 +216,7 @@ const advice2 = [
   "Remember 80 percent of the success in any job is based on your ability to deal with people.",
   "Don't expect life to be fair.",
 ];
-const advice3 = [
+const advice3: string[] = [
   "Always maintain a good sense of humor.",
   "Never be too good to start at the bottom.",
   "Exercise every single day, even when you don't feel like it.",
@@ -241,7 +243,7 @@ const advice3 = [
   "Have common sense. Think about the most reasonable answer to every situation. If you don't have common sense, youre a bust.",
   "Life is a gift that you must unwrap. Its up to you to determine if whats inside will lead you to happiness or dismay. You have the power to make that decision for yourself.",
 ];
-const al = [
+const al: string[] = [
   "1. He faces challenges head-on",
   "Alpha males bravely face every challenge life throws at them. In fact, they thrive when life throws them a curveball. They conquer their fears and insecurities and overcome all the obstacles. Even when the stakes are high, they don't stand down but strive. Failures are part of their life, too, but they are never get bogged down by them. They dust themselves off and try again.",
   "2. He makes tough decisions",
@@ -282,7 +284,7 @@ const al = [
   "One of the biggest strengths of an alpha male is his sense of humor. He doesn't get offended if people make fun of him. Instead, he spins the situation in his favor by laughing at himself. He can make light of even his most humiliating failure because he considers it a learning experience. A silly joke has no effect on his sense of self-worth — he takes it in his stride and wins the hearts of even his detractors.",
 ];
 
-const advice4 = [
+const advice4: string[] = [
   "Take risks in your life. If you win, you can lead; if you lose, you can guide.",
   "People are not what they say but what they do; so judge them not from their words but from their actions.",
   "When someone hurts you, don't feel bad because it's a law of nature that the tree that bears the sweetest fruits gets maximum number of stones.",
@@ -304,7 +306,7 @@ const advice4 = [
   "If you succeed in cheating someone, don't think that the person is a fool...... Realize that the person trusted you much more than you deserved.",
   "Honesty is an expensive gift; don't expect it from cheap people.",
 ];
-const advice5 = [
+const advice5: string[] = [
   "After a while, you get used to people understanding.",
   "Aspire to inspire before you expire.",
   "Bad? Nope. I'm the worst!",
@@ -313,23 +315,14 @@ const advice5 = [
   "Don't try to fit in. You were born to stand out.",
   "Even the galaxy is incomplete without me, 'coz I'm the main star.",
 ];
-// quotes data
-const QUOTES_DATA = [
-  "Remember to smile",
-  ...advice5,
-  ...advice4,
-  ...advice3,
-  ...advice2,
-  ...advice1,
-  ...al,
-  ...Freedom_is_Worth_The_Fight,
-];
 
 export {
-  QUOTES_DATA,
   Freedom_is_Worth_The_Fight,
   advice1,
   advice2,
   advice3,
+  advice4,
+  advice5,
   al,
+  SMILE,
 };
