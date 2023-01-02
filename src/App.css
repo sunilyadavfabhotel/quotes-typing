@@ -244,7 +244,7 @@ input[type="range"]:hover {
 }
 
 .typing-area {
-  width: 100vw;
+  min-width: 90vw;
   max-width: 1000px;
   font-size: 40px;
   font-family: "Dancing Script";
@@ -272,6 +272,56 @@ footer {
 .editor-wrapper {
   font-size: 40px;
   padding-bottom: 40px;
+}
+
+select {
+  /* Reset Select */
+  appearance: none;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  /* Personalize */
+  flex: 1;
+  padding: 5px 10px;
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: rgb(22, 20, 20);
+  background-image: none;
+  cursor: pointer;
+  font-family: "Dancing Script";
+}
+
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+
+/* Custom Select wrapper */
+.quotes-collection-option {
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 2em;
+  border-radius: .25em;
+  overflow: hidden;
+}
+
+/* Arrow */
+.quotes-collection-option::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: .5em;
+  background-color: #34495e;
+  transition: .25s all ease;
+  pointer-events: none;
+}
+
+/* Transition */
+.quotes-collection-option:hover::after {
+  color: #0f0;
 }
 
 .gray {
@@ -453,6 +503,7 @@ footer .footnote .highlight {
   }
 
   .reset-btn {
+    display: flex;
     font-size: 25px;
     margin: 0 5px;
     cursor: pointer;
@@ -481,6 +532,10 @@ footer .footnote .highlight {
     font-size: 25px;
     line-height: 25px;
   }
+
+  .quotes-collection-option {
+    width: 90vw;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -489,7 +544,7 @@ footer .footnote .highlight {
   }
 
   .name-input {
-    width: 150px;
+    width: 200px;
     font-size: 25px;
   }
 
