@@ -1,6 +1,6 @@
 # [Quotes-typing](https://sunilkuyadav.github.io/quotes-typing/)
 
-Quotes-typing is a react based web page design to improve your ten-fingure typeing. The fun fact is you don't have to type some random words but motivational quotes so you will be improving your ten-fingure typeing speed along with motivation.
+Quotes-typing is a react-based web page design to improve your ten-finger typing. You don't have to type some random words but motivational quotes, so you will be improving your ten-figure typing speed and motivation.
 All the best!
 
 ## Demo
