@@ -315,7 +315,32 @@ const advice5: string[] = [
   "Don't try to fit in. You were born to stand out.",
   "Even the galaxy is incomplete without me, 'coz I'm the main star.",
 ];
-
+const ankur_warikoo_22_lessons: string[] = [
+  "You can change your past by changing the meaning of your memories.",
+  "The smarter you get, the faster you lose friends.",
+  "Money doesn't chhange you. It amplifies who you truly are.",
+  "You don't suck at managing your time, you just don't know how valuable it is.",
+  "A beautiful life is to know how to live alone, but never have the need to.",
+  "Your fear of embarrassing yourself, is your biggest hurdle to growth.",
+  "No one is coming to save you. Your life is 100% your responsibility.",
+  "The hardest thing is to focus. The easiest thing is to complain.",
+  "You will free yourself the day you forgive your parents and stop blaming them.",
+  "The more available you are, the less respected you'd be.",
+  "If you truly know who you are, no one can ever touch you!",
+  "The day you stop asking 'when should I do it', is the day you are ready to do it.",
+  "We all have two money lives. The second one begains when we realize we have enough money for our life.",
+  "If you say the truth, you do not have to remember what you said to whom.",
+  "True grouth lies in doing the boring things over and over again.",
+  "When in doubt don't ask what should I do. Instead ask what do I WANT to do. Solve for making that happen.",
+  "If you aren't happy doing it, why are you still in it?",
+  "Focus on effort, not results.",
+  "If your parents are not rich, but you got a good education, be grateful fro their sacrifices.",
+  "A truly happy person will never troll anyone.",
+  "The face can be misleading. Fall in love with the mind.",
+  "If you are loved only when you are around, then it's not love.",
+  "The only thing that matters in the world is your opinion about your own.",
+  "I trust you!",
+];
 export {
   Freedom_is_Worth_The_Fight,
   advice1,
@@ -325,4 +350,5 @@ export {
   advice5,
   al,
   SMILE,
+  ankur_warikoo_22_lessons,
 };

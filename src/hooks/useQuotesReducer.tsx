@@ -9,11 +9,13 @@ import {
   Freedom_is_Worth_The_Fight,
   SMILE,
   al,
+  ankur_warikoo_22_lessons,
 } from "../data";
 import { QuotesAction, QuotesActionKind, QuotesState } from "../types";
 
 const initialState: QuotesState = [
   ...SMILE,
+  ...ankur_warikoo_22_lessons,
   ...advice5,
   ...advice4,
   ...advice3,
@@ -40,6 +42,8 @@ const reducer = (state: QuotesState, action: QuotesAction) => {
       return [...SMILE, ...al];
     case QuotesActionKind.FREEDOM_IS_WORTH_FIGHTING:
       return [...SMILE, ...Freedom_is_Worth_The_Fight];
+    case QuotesActionKind.ANKUR_WARIKOO_22_LESSONS:
+      return [...SMILE, ...ankur_warikoo_22_lessons];
     default:
       return initialState;
   }

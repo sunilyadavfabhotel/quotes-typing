@@ -8,11 +8,16 @@ enum QuotesActionKind {
   ADVICE_5 = "ADVICE_5",
   ALPH_MAN = "ALPH_MAN",
   FREEDOM_IS_WORTH_FIGHTING = "FREEDOM_IS_WORTH_FIGHTING",
+  ANKUR_WARIKOO_22_LESSONS = "ANKUR_WARIKOO_22_LESSONS",
   ALL = "ALL",
 }
 
 const OPTIONS = [
   { type: QuotesActionKind.ALL, label: "All Quotes" },
+  {
+    type: QuotesActionKind.ANKUR_WARIKOO_22_LESSONS,
+    label: "Ankur Warikoo 22 Lessons",
+  },
   { type: QuotesActionKind.ADVICE_1, label: "Advice 1" },
   { type: QuotesActionKind.ADVICE_2, label: "Advice 2" },
   { type: QuotesActionKind.ADVICE_3, label: "Advice 3" },
