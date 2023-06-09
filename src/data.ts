@@ -315,6 +315,23 @@ const advice5: string[] = [
   "Don't try to fit in. You were born to stand out.",
   "Even the galaxy is incomplete without me, 'coz I'm the main star.",
 ];
+const advice6: string[] = [
+  "Take care of your body. Remember health is another form of wealth.",
+  "Normalize walking some paths alone because goals are personal.",
+  "Don't waste your enery to fear. Uae your energy to believe, learn, create, and grow.",
+  "If you want to be happy, always have zero expectations of others",
+  "Tell no one about your plans, level up in private.",
+  "You won't be young forever, do what makes you happy every day.",
+  "Be mature enough to control your emotions. Learn to react less.",
+  "Free yourself from the society's advice, most of them have no idea of what they're doing.",
+  "Don't try to change anyone. Change how you deal with them.",
+  "Your circle is supposed to be the proud, not jealous.",
+  "Do yourself a favor, get rich; Life gets easier with money not time.",
+  "Master self discipline and consistency and watch your life change.",
+  "The family you create is more important than the family you come from.",
+  "Don't go broke tryimg to impress broke people",
+  "Be smart enough to realize nobody got rich with a salary."
+]
 const ankur_warikoo_22_lessons: string[] = [
   "You can change your past by changing the meaning of your memories.",
   "The smarter you get, the faster you lose friends.",
@@ -348,6 +365,7 @@ export {
   advice3,
   advice4,
   advice5,
+  advice6,
   al,
   SMILE,
   ankur_warikoo_22_lessons,
