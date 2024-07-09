@@ -9,6 +9,7 @@ enum QuotesActionKind {
   ALPH_MAN = "ALPH_MAN",
   FREEDOM_IS_WORTH_FIGHTING = "FREEDOM_IS_WORTH_FIGHTING",
   ANKUR_WARIKOO_22_LESSONS = "ANKUR_WARIKOO_22_LESSONS",
+  Jet_Van_Wijk = "Jet_Van_Wijk",
   ALL = "ALL",
 }
 
@@ -28,6 +29,7 @@ const OPTIONS = [
     type: QuotesActionKind.FREEDOM_IS_WORTH_FIGHTING,
     label: "Freedom is worth fighting",
   },
+  { type: QuotesActionKind.Jet_Van_Wijk, label: "Jet Van Wijk" },
 ];
 
 // An interface for our Qoutes action

@@ -10,6 +10,7 @@ import {
   SMILE,
   al,
   ankur_warikoo_22_lessons,
+  Jet_Van_Wijk,
 } from "../data";
 import { QuotesAction, QuotesActionKind, QuotesState } from "../types";
 
@@ -23,6 +24,7 @@ const initialState: QuotesState = [
   ...advice1,
   ...al,
   ...Freedom_is_Worth_The_Fight,
+  ...Jet_Van_Wijk,
 ];
 const init = () => initialState;
 

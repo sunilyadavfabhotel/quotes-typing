@@ -330,8 +330,8 @@ const advice6: string[] = [
   "Master self discipline and consistency and watch your life change.",
   "The family you create is more important than the family you come from.",
   "Don't go broke tryimg to impress broke people",
-  "Be smart enough to realize nobody got rich with a salary."
-]
+  "Be smart enough to realize nobody got rich with a salary.",
+];
 const ankur_warikoo_22_lessons: string[] = [
   "You can change your past by changing the meaning of your memories.",
   "The smarter you get, the faster you lose friends.",
@@ -358,6 +358,21 @@ const ankur_warikoo_22_lessons: string[] = [
   "The only thing that matters in the world is your opinion about your own.",
   "I trust you!",
 ];
+
+const Jet_Van_Wijk = [
+  "Self care is also choosing not to argue with people who are committed to misunderstanding you.",
+  "First, know your worth. Second, control your emotions. Third, never settle.",
+  "Upgrade your standards, mindset and most importantly, your skills.",
+  "To Attract better, you have to become better. You can't do the same things and expect a different outcome.",
+  "Transform your mindset.",
+  "Upgrade your habits.",
+  "Invest in yourself.",
+  "Learn High Income Skills.",
+  "It all starts with you.",
+  "Dedicate the next 90 days exclusively to your goals.",
+  "Don't tell anyone.",
+  "Don't make any announcements, just fall back and do the work.",
+];
 export {
   Freedom_is_Worth_The_Fight,
   advice1,
@@ -369,4 +384,5 @@ export {
   al,
   SMILE,
   ankur_warikoo_22_lessons,
+  Jet_Van_Wijk,
 };
